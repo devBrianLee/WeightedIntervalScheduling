@@ -7,10 +7,10 @@ import java.util.*;
  */
 
 public class IntervalScheduling {
-    
-public static void main(String[] args) {
+Job[] test = new Job[10];    
+public void main(String[] args) {
         // TODO code application logic here
-        
+        mostTasksFinder(test);
     }
     
 public class Job{
@@ -52,8 +52,6 @@ public double getWeight(){
 
 }
 
-Job[] test = new Job[10];
-
 public void initialization(){
 Job job1 = new Job();
 job1.setJobName("job1");
@@ -85,11 +83,28 @@ test[2] = job3;
 test[3] = job4;
 }
 
-public static Object[] mostTasksFinder(Object[] jobs){ 
-    Object[] taskList = new String[100];
-    HashMap <String, Double> find;
-    
-    return taskList;
+//Sort Jobs by Start Time
+public Job[] sortJobs(Job[] jobs){
+    return jobs;
+}
 
+//Find out which Jobs to do
+public Job[] mostTasksFinder(Job[] jobs){
+    int amountOfJobs = jobs.length;
+    while (amountOfJobs != 0){
+        Job bestJob = new Job();
+        double earliestEndTime = 10000.0;
+        for (int n = 0; n < jobs.length; n++){
+            if(earliestEndTime > jobs[n].getEndTime()){
+               earliestEndTime = jobs[n].getEndTime();
+               bestJob = jobs[n];
+            }
+    }
+       for (int n = 0; n <jobs.length; n++){
+           if (jobs[n].getStartTime() < earliestEndTime)
+               amountOfJobs --;
+       }
+    }
+    return jobs;
 }
 }
