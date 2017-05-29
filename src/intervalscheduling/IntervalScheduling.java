@@ -7,9 +7,37 @@ import java.util.*;
  */
 
 public class IntervalScheduling {
-Job[] test = new Job[10];    
-public void main(String[] args) {
+public static void main(String[] args) {
         // TODO code application logic here
+        Job[] test = new Job[10];    
+        Job job1 = new Job();
+job1.setJobName("job1");
+job1.setStartTime(1);
+job1.setStartTime(2);
+job1.setStartTime(50);
+
+Job job2 = new Job();
+job2.setJobName("job2");
+job2.setStartTime(3);
+job2.setStartTime(5);
+job2.setStartTime(20);
+
+Job job3 = new Job();
+job3.setJobName("job3");
+job3.setStartTime(6);
+job3.setStartTime(19);
+job3.setStartTime(100);
+
+Job job4 = new Job();
+job4.setJobName("job4");
+job4.setStartTime(2);
+job4.setStartTime(100);
+job4.setStartTime(200);
+
+test[0] = job1;
+test[1] = job2;
+test[2] = job3;
+test[3] = job4;
         mostTasksFinder(test);
     }
     
@@ -53,43 +81,16 @@ public double getWeight(){
 }
 
 public void initialization(){
-Job job1 = new Job();
-job1.setJobName("job1");
-job1.setStartTime(1);
-job1.setStartTime(2);
-job1.setStartTime(50);
 
-Job job2 = new Job();
-job2.setJobName("job2");
-job2.setStartTime(3);
-job2.setStartTime(5);
-job2.setStartTime(20);
-
-Job job3 = new Job();
-job3.setJobName("job3");
-job3.setStartTime(6);
-job3.setStartTime(19);
-job3.setStartTime(100);
-
-Job job4 = new Job();
-job4.setJobName("job4");
-job4.setStartTime(2);
-job4.setStartTime(100);
-job4.setStartTime(200);
-
-test[0] = job1;
-test[1] = job2;
-test[2] = job3;
-test[3] = job4;
 }
 
 //Sort Jobs by Start Time
-public Job[] sortJobs(Job[] jobs){
+public static Job[] sortJobs(Job[] jobs){
     return jobs;
 }
 
 //Find out which Jobs to do
-public Job[] mostTasksFinder(Job[] jobs){
+public static Job[] mostTasksFinder(Job[] jobs){
     int amountOfJobs = jobs.length;
     while (amountOfJobs != 0){
         Job bestJob = new Job();
