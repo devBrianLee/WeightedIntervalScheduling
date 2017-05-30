@@ -86,6 +86,7 @@ public void initialization(){
 
 //Sort Jobs by Start Time
 public static Job[] sortJobs(Job[] jobs){
+    int test = 1;
     return jobs;
 }
 
