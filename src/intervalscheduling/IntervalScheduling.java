@@ -88,7 +88,7 @@ public void initialization(){
 public static Job[] sortJobs(Job[] jobs){
     int test = 100;
     int realtest = 20;
-    int testetsta = 200;
+    int testetstaaa = 200;
     return jobs;
 }
 
